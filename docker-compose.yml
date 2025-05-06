@@ -1,0 +1,15 @@
+services:
+  db:
+    image: bitnami/postgresql:latest
+    container_name: db_cadastros
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRESQL_USERNAME=root
+      - POSTGRESQL_PASSWORD=root
+      - POSTGRESQL_DATABASE=db_cadastros
+    volumes:
+      - db_cadastros_pg_data:/bitnami/postgresql
+
+volumes:
+  db_cadastros_pg_data:

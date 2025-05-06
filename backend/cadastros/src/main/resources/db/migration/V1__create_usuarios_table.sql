@@ -1,0 +1,7 @@
+CREATE EXTENSION IF NOT EXISTS "pgcrypto";
+
+CREATE TABLE usuarios(
+    id UUID DEFAULT gen_random_uuid() PRIMARY KEY,
+    cpf VARCHAR(11) UNIQUE NOT NULL,
+    nome VARCHAR(100) UNIQUE NOT NULL
+);
