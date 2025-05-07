@@ -57,6 +57,9 @@ public class EnderecoService {
                 )
             )
                 throw new EnderecoException("Todos os campos de endereço devem ser preenchidos!");
+
+            if(endereco.uf().length() != 2)
+                throw new EnderecoException("UF inválida!");
         }
 
     }

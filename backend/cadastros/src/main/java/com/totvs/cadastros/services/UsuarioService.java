@@ -75,4 +75,8 @@ public class UsuarioService {
         else
             return usuarioRepository.findByNomeLike(filtro);
     }
+
+    public Usuario buscarUsuarioPorId(UUID id) {
+        return usuarioRepository.findById(id).orElseThrow(() -> new UsuarioException("Usuário não encontrado com o ID: " + id));
+    }
 }

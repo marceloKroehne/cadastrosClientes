@@ -4,36 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="78ac6173-251b-4745-ad44-93b74d21aa18" name="Changes" comment="Repositories">
-      <change afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/requests/BuscarUsuarioRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/requests/CadastroRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/requests/EnderecoRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/requests/UpdateRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/requests/UsuarioRequestDTO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/exceptions/EnderecoException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/exceptions/TelefoneException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/exceptions/UsuarioException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/services/CadastroService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/services/EnderecoService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/services/TelefoneService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__create_usuarios_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V2__create_telefones_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V3__create_endereco_table.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/totvs/cadastros/BibliotecaTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/totvs/cadastros/EnderecoServiceTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/totvs/cadastros/TelefoneServiceTests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/totvs/cadastros/UsuarioServiceTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/biblioteca/Biblioteca.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/biblioteca/Biblioteca.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/Endereco.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/Endereco.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/Retorno.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/Retorno.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/Usuario.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/domains/Usuario.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/repositories/EnderecoRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/repositories/EnderecoRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/repositories/TelefoneRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/repositories/TelefoneRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/repositories/UsuarioRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/totvs/cadastros/repositories/UsuarioRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-    </list>
+    <list default="true" id="78ac6173-251b-4745-ad44-93b74d21aa18" name="Changes" comment="Repositories" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,7 +20,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
@@ -72,7 +43,7 @@
     "Application.CadastrosApplication.executor": "Debug",
     "JUnit.BibliotecaTests.executor": "Run",
     "JUnit.CadastrosApplicationTests.contextLoads.executor": "Debug",
-    "JUnit.EnderecoServiceTests.executor": "Run",
+    "JUnit.EnderecoServiceTests.executor": "Debug",
     "JUnit.UsuarioServiceTests.executor": "Run",
     "Maven.cadastro [clean].executor": "Run",
     "Maven.cadastro [install,-U].executor": "Run",
@@ -83,9 +54,9 @@
     "Maven.cadastros [install].executor": "Run",
     "Maven.cadastros [package].executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
+    "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/marce/OneDrive/Área de Trabalho/cadastros/src/main/resources/db/migrations",
+    "last_opened_file_path": "C:/Users/marce/OneDrive/Área de Trabalho/cadastroClientes/cadastrosClientes/backend/cadastros",
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -111,7 +82,7 @@
       <command value="mvn clean package -DskipTests " />
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.EnderecoServiceTests">
+  <component name="RunManager" selected="Application.CadastrosApplication">
     <configuration name="CadastrosApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.totvs.cadastros.CadastrosApplication" />
       <module name="cadastros" />
@@ -188,10 +159,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.CadastrosApplication" />
         <item itemvalue="JUnit.EnderecoServiceTests" />
         <item itemvalue="JUnit.UsuarioServiceTests" />
         <item itemvalue="JUnit.BibliotecaTests" />
-        <item itemvalue="Application.CadastrosApplication" />
         <item itemvalue="JUnit.CadastrosApplicationTests.contextLoads" />
       </list>
     </recent_temporary>

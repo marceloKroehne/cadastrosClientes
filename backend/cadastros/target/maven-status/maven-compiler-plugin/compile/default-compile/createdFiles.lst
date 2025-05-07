@@ -4,7 +4,6 @@ com\totvs\cadastros\domains\requests\UpdateRequestDTO.class
 com\totvs\cadastros\repositories\UsuarioRepository.class
 com\totvs\cadastros\configurations\CadastroConfiguration.class
 com\totvs\cadastros\repositories\TelefoneRepository.class
-com\totvs\cadastros\domains\requests\UsuarioRequestDTO.class
 com\totvs\cadastros\biblioteca\Biblioteca.class
 com\totvs\cadastros\domains\requests\CadastroRequestDTO.class
 com\totvs\cadastros\services\CadastroService.class

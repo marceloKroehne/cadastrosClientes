@@ -1,1 +1,5 @@
+com\totvs\cadastros\BibliotecaTests.class
 com\totvs\cadastros\CadastrosApplicationTests.class
+com\totvs\cadastros\EnderecoServiceTests.class
+com\totvs\cadastros\TelefoneServiceTests.class
+com\totvs\cadastros\UsuarioServiceTests.class

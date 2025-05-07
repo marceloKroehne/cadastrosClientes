@@ -9,7 +9,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 import java.util.UUID;
 
 @Service
@@ -38,12 +40,18 @@ public class TelefoneService {
     }
 
     private void validarTelefones(List<String> telefones) throws RuntimeException {
+
+        Set<String> telefonesUnicos = new HashSet<>();
+
         for (String telefone : telefones){
             if(!Biblioteca.isTelefoneValido(telefone))
                 throw new TelefoneException("O telefone informado é inválido! (" +telefone +")");
 
             if(existeTelefoneCadastrado(telefone))
                 throw new TelefoneException("O telefone informado já está cadastrado! (" +telefone +")");
+            if (!telefonesUnicos.add(telefone)) {
+                throw new TelefoneException("Telefone já informado! (" + telefone + ")");
+            }
         }
     }
 
