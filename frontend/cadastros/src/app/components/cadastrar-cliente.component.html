@@ -1,0 +1,98 @@
+<button [routerLink]="['/listar-clientes']">Listar clientes</button>
+
+<h1>Cadastro de clientes</h1>
+
+<form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+  
+  <div [ngClass]="{'has-error': clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched}">
+    <label>Nome</label>
+    <input formControlName="nome">
+    <div *ngIf="clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched">
+      <small class="error-text">Nome é obrigatório</small>
+    </div>
+  </div>
+
+  <div [ngClass]="{'has-error': clienteForm.get('cpf')?.invalid && clienteForm.get('cpf')?.touched}">
+    <label>CPF</label>
+    <input formControlName="cpf" pattern="\d*" maxlength="11">
+    <div *ngIf="clienteForm.get('cpf')?.invalid && clienteForm.get('cpf')?.touched">
+      <small class="error-text">CPF inválido</small>
+    </div>
+  </div>
+
+  <h3>Endereços</h3>
+  <div formArrayName="enderecos">
+    <div *ngFor="let endereco of enderecos.controls; let i = index" [formGroupName]="i">
+      
+      <div [ngClass]="{'has-error': endereco.get('logradouro')?.invalid && endereco.get('logradouro')?.touched}">
+        <input formControlName="logradouro" placeholder="Logradouro">
+        <div *ngIf="endereco.get('logradouro')?.invalid && endereco.get('logradouro')?.touched">
+          <small class="error-text">Logradouro é obrigatório</small>
+        </div>
+      </div>
+
+      <div [ngClass]="{'has-error': endereco.get('numero')?.invalid && endereco.get('numero')?.touched}">
+        <input formControlName="numero" placeholder="Número">
+        <div *ngIf="endereco.get('numero')?.invalid && endereco.get('numero')?.touched">
+          <small class="error-text">Número é obrigatório</small>
+        </div>
+      </div>
+
+      <div [ngClass]="{'has-error': endereco.get('complemento')?.invalid && endereco.get('complemento')?.touched}">
+        <input formControlName="complemento" placeholder="Complemento">
+        <div *ngIf="endereco.get('complemento')?.invalid && endereco.get('complemento')?.touched">
+          <small class="error-text">Complemento é obrigatório</small>
+        </div>
+      </div>
+
+      <div [ngClass]="{'has-error': endereco.get('bairro')?.invalid && endereco.get('bairro')?.touched}">
+        <input formControlName="bairro" placeholder="Bairro">
+        <div *ngIf="endereco.get('bairro')?.invalid && endereco.get('bairro')?.touched">
+          <small class="error-text">Bairro é obrigatório</small>
+        </div>
+      </div>
+
+      <div [ngClass]="{'has-error': endereco.get('cidade')?.invalid && endereco.get('cidade')?.touched}">
+        <input formControlName="cidade" placeholder="Cidade">
+        <div *ngIf="endereco.get('cidade')?.invalid && endereco.get('cidade')?.touched">
+          <small class="error-text">Cidade é obrigatória</small>
+        </div>
+      </div>
+
+      <div [ngClass]="{'has-error': endereco.get('uf')?.invalid && endereco.get('uf')?.touched}">
+        <input formControlName="uf" placeholder="UF">
+        <div *ngIf="endereco.get('uf')?.invalid && endereco.get('uf')?.touched">
+          <small class="error-text">UF é obrigatória</small>
+        </div>
+      </div>
+
+      <div [ngClass]="{'has-error': endereco.get('cep')?.invalid && endereco.get('cep')?.touched}">
+        <input formControlName="cep" pattern="\d*" maxlength="8" placeholder="CEP">
+        <div *ngIf="endereco.get('cep')?.invalid && endereco.get('cep')?.touched">
+          <small class="error-text">CEP inválido</small>
+        </div>
+      </div>
+
+      <button type="button" (click)="removerEndereco(i)">Remover Endereço</button>
+    </div>
+  </div>
+  <button type="button" (click)="adicionarEndereco()">Adicionar Endereço</button>
+
+  <h3>Telefones</h3>
+  <div formArrayName="telefones">
+    <div *ngFor="let telefone of telefones.controls; let i = index">
+      <div [ngClass]="{'has-error': telefone.invalid && telefone.touched}">
+        <input [formControlName]="i" pattern="\d*" maxlength="11" placeholder="Telefone">
+        <div *ngIf="telefone.invalid && telefone.touched">
+          <small class="error-text">Telefone inválido</small>
+        </div>
+      </div>
+      <button type="button" (click)="removerTelefone(i)">Remover Telefone</button>
+    </div>
+  </div>
+  
+  <button type="button" (click)="adicionarTelefone()">Adicionar Telefone</button>
+
+  <button type="submit">Salvar Cliente</button>
+
+</form>

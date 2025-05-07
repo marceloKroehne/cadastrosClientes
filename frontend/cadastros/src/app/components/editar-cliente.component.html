@@ -1,0 +1,51 @@
+<button [routerLink]="['/listar-clientes']">Listar clientes</button>
+
+<h1>Editar cliente</h1>
+
+<form [formGroup]="clienteForm" (ngSubmit)="onSubmit()">
+
+  <div [ngClass]="{'has-error': clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched}">
+    <label>Nome</label>
+    <input formControlName="nome">
+    <div *ngIf="clienteForm.get('nome')?.invalid && clienteForm.get('nome')?.touched">
+      <small class="error-text">Nome é obrigatório</small>
+    </div>
+  </div>
+
+  <div [ngClass]="{'has-error': clienteForm.get('cpf')?.invalid && clienteForm.get('cpf')?.touched}">
+    <label>CPF</label>
+    <input formControlName="cpf" pattern="\d*" maxlength="11">
+    <div *ngIf="clienteForm.get('cpf')?.invalid && clienteForm.get('cpf')?.touched">
+      <small class="error-text">CPF inválido</small>
+    </div>
+  </div>
+
+  <h3>Endereços</h3>
+  <div formArrayName="enderecos">
+    <div *ngFor="let endereco of enderecos.controls; let i = index" [formGroupName]="i">
+      <input formControlName="logradouro" placeholder="Logradouro">
+      <input formControlName="numero" placeholder="Número">
+      <input formControlName="complemento" placeholder="Complemento">
+      <input formControlName="bairro" placeholder="Bairro">
+      <input formControlName="cidade" placeholder="Cidade">
+      <input formControlName="uf" placeholder="UF">
+      <input formControlName="cep" pattern="\d*" maxlength="8" placeholder="CEP">
+      <button type="button" (click)="removerEndereco(i)">Remover Endereço</button>
+    </div>
+  </div>
+
+  <button type="button" (click)="adicionarEndereco()">Adicionar Endereço</button>
+
+  <h3>Telefones</h3>
+  <div formArrayName="telefones">
+    <div *ngFor="let telefone of telefones.controls; let i = index">
+      <input [formControlName]="i" pattern="\d*" maxlength="11" placeholder="Telefone">
+      <button type="button" (click)="removerTelefone(i)">Remover Telefone</button>
+    </div>
+  </div>
+
+  <button type="button" (click)="adicionarTelefone()">Adicionar Telefone</button>
+
+  <button type="submit">Salvar Cliente</button>
+
+</form>

@@ -1,0 +1,52 @@
+<h2>Lista de Clientes</h2>
+
+<div>
+  <label for="filtro">Filtrar por nome:</label>
+  <input id="filtro" [(ngModel)]="filtro" (ngModelChange)="aplicarFiltro()" placeholder="Digite o nome para filtrar" />
+</div>
+
+<div *ngIf="carregando">
+  Carregando clientes...
+</div>
+
+<div *ngIf="!carregando && clientes.length === 0">
+  Nenhum cliente encontrado.
+</div>
+
+<table *ngIf="!carregando && clientes.length > 0" border="1">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>CPF</th>
+      <th>Telefones</th>
+      <th>Endereços</th>
+      <th>Ações</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let cliente of clientes">
+      <td>{{ cliente.usuario.nome }}</td>
+      <td>{{ cliente.usuario.cpf }}</td>
+      <td>
+        <ul>
+          <li *ngFor="let telefone of cliente.telefones">{{ telefone.telefone }}</li>
+        </ul>
+      </td>
+      <td>
+        <ul>
+          <li *ngFor="let endereco of cliente.enderecos">
+            {{ endereco.logradouro }}, {{ endereco.numero }} - {{ endereco.bairro }} - {{ endereco.cidade }}/{{ endereco.uf }} - {{ endereco.cep }}
+          </li>
+        </ul>
+      </td>
+      <td>
+        <button [routerLink]="['/editar-cliente', cliente.usuario.id]">Editar</button> 
+        <button (click)="deletarCliente(cliente.usuario.id)">Deletar</button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<br>
+
+<button [routerLink]="['/cadastrar-cliente']">Cadastrar clientes</button>
