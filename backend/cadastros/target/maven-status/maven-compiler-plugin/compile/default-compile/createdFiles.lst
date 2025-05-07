@@ -1,6 +1,5 @@
 com\totvs\cadastros\services\EnderecoService.class
 com\totvs\cadastros\exceptions\TelefoneException.class
-com\totvs\cadastros\domains\requests\UpdateRequestDTO.class
 com\totvs\cadastros\repositories\UsuarioRepository.class
 com\totvs\cadastros\configurations\CadastroConfiguration.class
 com\totvs\cadastros\repositories\TelefoneRepository.class
@@ -19,4 +18,5 @@ com\totvs\cadastros\services\TelefoneService.class
 com\totvs\cadastros\domains\Retorno.class
 com\totvs\cadastros\exceptions\UsuarioException.class
 com\totvs\cadastros\domains\requests\BuscarUsuarioRequestDTO.class
+com\totvs\cadastros\configurations\CadastroConfiguration$1.class
 com\totvs\cadastros\controllers\CadastroController.class
